@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WNG – User Interface</title>
+<style>
+.main__wrap {
+    max-width: 400px;
+    max-height: 1000px;
+	width: 400px;
+    /*height: 1000px;*/
+	border: 1px solid #9E9E9E;
+	background-color: #d0e5ec;
+}
+
+.main__wrap .header__bar {
+    height: 35px;
+    background-color: #607D8B;
+}
+
+.main__wrap .user {
+    cursor: pointer;
+}
+
+.main__wrap .user .user__wrap {
+	height: 50px;
+    padding: 10px;
+    margin: 5px;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap {
+    float: left;
+    display: inline-block;
+	margin-right: 15px;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap p {
+    margin: 0;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap.pos__rel {
+	position: relative;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap p.user__img {
+    width: 50px;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap p.user__name {
+    font-weight: bold;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap p.user__msg {
+    color: #808080;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;	
+}
+
+.main__wrap .user .user__wrap .inner__userWrap span.user__status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap span.user__status.dot.busy {
+    background-color: #ffa500;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap span.user__status.dot.active {
+    background-color: #4CAF50;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap span.user__status.dot.offline {
+    background-color: #E91E63;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap span.user__status.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.main__wrap .user .user__wrap .inner__userWrap p img {
+	width: 100%;
+	border-radius: 25px;
+}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	$('.user').click(function(){
+		$('.user').css('background-color', '#d0e5ec');
+		$(this).css('background-color', '#ffffff');
+	});
+});
+</script>
+</head>
+<body>
+	<div class="main__wrap">
+		<div class="header__bar"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/smiley.png">
+					</p>
+					<span class="user__status dot busy"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 1</p>
+					<p class="user__msg">Message 1 long message long message long message long message long message long message</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/homer.png">
+					</p>
+					<span class="user__status dot active"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 2</p>
+					<p class="user__msg">Message 2</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/smiley.png">
+					</p>
+					<span class="user__status dot offline"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 3</p>
+					<p class="user__msg">Message 3</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/dv.png">
+					</p>
+					<span class="user__status dot offline"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 4</p>
+					<p class="user__msg">Message 4</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/naruto.jpg">
+					</p>
+					<span class="user__status dot offline"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 5</p>
+					<p class="user__msg">Message 5</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/smiley.png">
+					</p>
+					<span class="user__status dot offline"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 6</p>
+					<p class="user__msg">Message 6</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/smiley.png">
+					</p>
+					<span class="user__status dot active"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 7</p>
+					<p class="user__msg">Message 7</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="user">
+			<div class="user__wrap">
+				<div class="inner__userWrap pos__rel">
+					<p class="user__img">
+						<img src="assets/img/smiley.png">
+					</p>
+					<span class="user__status dot busy"></span>
+				</div>
+				<div class="inner__userWrap">
+					<p class="user__name">User 8</p>
+					<p class="user__msg">Message 8</p>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</body>
+</html>
